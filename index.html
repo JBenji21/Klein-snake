@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Klein Snake (Head-Fixed Torus)</title>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <main class="wrap">
+      <header class="hud">
+        <div><strong>Klein Snake</strong></div>
+
+        <div style="display:flex; gap:12px; align-items:center;">
+            <label class="selectWrap" style="display:flex; gap:8px; align-items:center;">
+            Size:
+            <select id="sizeSelect">
+                <option value="large" selected>Large (31×31)</option>
+                <option value="small">Small (21×21)</option>
+            </select>
+            <label class="selectWrap" style="display:flex; gap:8px; align-items:center;">
+                Topology:
+                <select id="topoSelect">
+                    <option value="klein" selected>Klein bottle</option>
+                    <option value="proj">Projective plane (Psychedelic mode)</option>
+                </select>
+                </label>
+            </label>
+            <div id="score">Score: 0</div>
+        </div>
+        </header>
+
+      <canvas id="game"></canvas>
+
+      <footer class="help">
+        <div>Move: Arrow keys / WASD • Pause: Space • Restart: R</div>
+        <div class="muted">Head stays centred; the world scrolls around it.</div>
+      </footer>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
